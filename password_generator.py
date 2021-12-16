@@ -92,7 +92,14 @@ def main():
     print('Note that ambiguous characters such as 0 (zero) and O (capital o) \
 are automatically excluded!\n')
 
-    length = int(input('How many characters for your password? '))
+    length = ''
+    while length is not int:
+        try:
+            length = int(input('How many characters for your password? '))
+            break
+        except ValueError:
+            print('Please enter an integer.')
+
     use_uchars = input('Use uppercase? [Y/n] ')
     use_nums = input('Use numbers? [Y/n] ')
     use_symbols = input('Use symbols? [Y/n] ')
