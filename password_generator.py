@@ -89,8 +89,8 @@ def main():
     print('======================')
     print('| Password Generator |')
     print('======================')
-    print('Note that ambiguous characters such as 0 (zero) and O (capital o) \
-are automatically excluded!\n')
+    print('\nNote that ambiguous characters such as 0 (zero) and O (capital o) \
+are automatically excluded! Press Ctrl+C to quit.\n')
 
     length = ''
     while length is not int:
