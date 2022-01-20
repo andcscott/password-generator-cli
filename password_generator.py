@@ -1,4 +1,4 @@
-import random
+import secrets
 
 class PasswordGenerator():
     """
@@ -68,14 +68,11 @@ class PasswordGenerator():
         possible characters that should be considered and generates the
         password.
         """
-        password = ''
         self.use_upper()
         self.use_nums()
         self.use_symbols()
-        while len(password) < self._length:
-            password += random.choice(self._available_chars)
-        print('\nYour new password is: ', password)
-        print('\n')
+        password = ''.join(secrets.choice(self._available_chars) for i in range(self._length))
+        print('\nYour new password is: ', password+'\n')
 
 def main():
     """
